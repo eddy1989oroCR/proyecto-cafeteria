@@ -28,11 +28,13 @@ html {
     margin: 0 auto;
 }
 
-.heading-1{
+.heading-1 {
     text-align: center;
     font-weight: 500;
-    font-size:  3rem; ;
+    font-size: 3rem;
+    ;
 }
+
 /* estilos del header  */
 .container-hero {
     background-color: var(--background-color);
@@ -379,11 +381,11 @@ html {
     flex-direction: column;
 }
 
-.container-options{
+.container-options {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 1rem ;
+    margin-bottom: 1rem;
 }
 
 .container-options span {
@@ -396,18 +398,18 @@ html {
     cursor: pointer;
 }
 
-.container-options span:hover{
+.container-options span:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
 
-.container-options span.active{
+.container-options span.active {
     background-color: var(--primary-color);
     color: #fff;
 }
 
 /* estilos de los productos */
-.container-products{
+.container-products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 3rem;
@@ -421,10 +423,140 @@ html {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.container-img{
+.container-img {
     position: relative;
 }
 
-.container-img img{
+.container-img img {
     width: 100%;
+}
+
+.container-img .discount {
+    position: relative;
+    left: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2px 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+    background-color: black;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    z-index: -1;
+    transition: all .4s ease;
+}
+/* los estilos del span en el .button-group */
+.button-group span {
+    border: 1px solid var(--primary-color);
+    padding: .8rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.button-group span:hover {
+    background-color: var(--primary-color);
+}
+.button-group span i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: all .4s ease;
+}
+
+.button-group span:hover i {
+    color: white;
+}
+/* permite ver los iconos al pasar el mouse sobre la tarjeta del producto lateral derecho los 3 iconos */
+.card-product:hover .button-group {
+    right: -1rem;
+    z-index: 0;
+}
+/* centra las estrellas y el contenido del producto */
+.content-card-product {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 1rem;
+}
+
+.stars {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    /*-1 significa hasta el final */
+}
+
+.stars i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.content-card-product h3 {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.content-card-product h3:hover {
+    color: var(--primary-color);
+}
+
+/* circulo del icono de pedido */
+.add-cart {
+    justify-self: start;
+    border: 2px solid black;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-cart:hover {
+    background-color: var(--primary-color);
+}
+
+.add-cart i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: all .4s ease;
+}
+
+/* con esto el icono cambia de color al pasar el mouse y ya no son del mismo color que el cambio de la clase anterior i  */
+.add-cart:hover i {
+    color: white;
+}
+
+.content-card-product .price {
+    font-size: 1.7rem;
+    font-weight: 600;
+    justify-self: end;
+    align-self: center;
+}
+
+.content-card-product .price span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #777;
+    margin-left: .5rem;
 }
