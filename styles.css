@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+/* variables de color */
+:root {
+    --primary-color: #c7a17a;
+    /* --secondary-color: #4a4a4a; */
+    --background-color: #f9f5f0;
+    /* --font-family: 'Poppins', sans-serif; */
+    --dark-color: #151515;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: poppins, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utilidades */
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.heading-1{
+    text-align: center;
+    font-weight: 500;
+    font-size:  3rem; ;
+}
+/* estilos del header  */
+.container-hero {
+    background-color: var(--background-color);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* contenerdor de atencion al cliente */
+.customer-support {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /* font-size: 1.4rem;
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 0.8rem 0; */
+}
+
+.customer-support i {
+    font-size: 3.3rem;
+    /* color: var(--dark-color); */
+}
+
+.content-customer-support {
+    display: flex;
+    flex-direction: column;
+}
+
+/* contenedor del logo */
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container-logo i {
+    font-size: 3rem;
+}
+
+.container-logo h1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* contenedor user  */
+.container-user {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.container-user .fa-user {
+    font-size: 3rem;
+    /* color: var(--primary-color); */
+    color: var(--primary-color);
+    /* color: #2434dd; */
+    padding-right: 2.5rem;
+    border-right: 1px solid #2434dd;
+}
+
+.container-user .fa-basket-shopping {
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-left: 1rem;
+}
+
+.content-shopping-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+/* navbar */
+.container-navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 1px;
+    background-color: white;
+    left: 50%;
+    bottom: -3px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+/* estilos del formulario de busqueda */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 2em;
+    background-color: white;
+    height: 4.4rem;
+    overflow: hidden;
+}
+
+.search-form input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    color: #777;
+    width: 25rem;
+    cursor: pointer;
+}
+
+.search-form imput::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+.search-form .btn-search {
+    background-color: var(--primary-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+.btn-search i {
+    font-size: 2rem;
+    color: white;
+}
+
+/* banner principal */
+.banner {
+    background-image: linear-gradient(100deg, #000000, #00000020),
+        url("img/banner.jpg");
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-banner {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+}
+
+.content-banner p {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.content-banner h2 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content-banner a {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+}
+
+/* estilo para main content */
+
+.main-content {
+    background-color: var(--background-color);
+}
+
+/* Features */
+.container-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.card-feature {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+}
+
+.card-feature i {
+    font-size: 2.7rem;
+    color: var(--primary-color);
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-content span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.feature-content p {
+    color: #777;
+    font-weight: 500;
+}
+
+/* seccion de las categorias */
+.top-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.container-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card-category {
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+/* vienen las categorias (clases) que estan dentro de .card-category */
+.category-moca {
+    background-image: linear-gradient(#00000080, #00000080),
+        url(img/moca-category.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.category-capuchino {
+    background-image: linear-gradient(#00000080, #00000080),
+        url(img/capuchino-category.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-expreso {
+    background-image: linear-gradient(#00000080, #00000080),
+        url(img/expreso-category.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* para aplicar el estilo a todas la p del card (Cafe moca- Expreso americano y capuchino)*/
+.card-category p {
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.card-category p::after {
+    content: "";
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translate(-50%, 50%);
+}
+
+.card-category span {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-category span:hover {
+    color: var(--primary-color);
+}
+
+/* estilos de los productos top  (Destacados-mas recientes-mas vendidos)*/
+.top-products {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-options{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem ;
+}
+
+.container-options span {
+    color: #777;
+    background-color: #fff;
+    padding: .7em 3em;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.container-options span:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.container-options span.active{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* estilos de los productos */
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+}
+
+.card-product {
+    background-color: #fff;
+    border-radius: 5rem;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-img{
+    position: relative;
+}
+
+.container-img img{
+    width: 100%;
+}
