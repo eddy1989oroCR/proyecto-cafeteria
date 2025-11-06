@@ -455,6 +455,7 @@ html {
     z-index: -1;
     transition: all .4s ease;
 }
+
 /* los estilos del span en el .button-group */
 .button-group span {
     border: 1px solid var(--primary-color);
@@ -470,6 +471,7 @@ html {
 .button-group span:hover {
     background-color: var(--primary-color);
 }
+
 .button-group span i {
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -479,11 +481,13 @@ html {
 .button-group span:hover i {
     color: white;
 }
+
 /* permite ver los iconos al pasar el mouse sobre la tarjeta del producto lateral derecho los 3 iconos */
 .card-product:hover .button-group {
     right: -1rem;
     z-index: 0;
 }
+
 /* centra las estrellas y el contenido del producto */
 .content-card-product {
     display: grid;
@@ -559,4 +563,134 @@ html {
     text-decoration: line-through;
     color: #777;
     margin-left: .5rem;
+}
+
+/* seccion de gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 30rem);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.gallery-img-3 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+
+/* especiales specials */
+
+.specials {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* estilos de Blogs  */
+.blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.card-blog {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-blog .container-img {
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-group-blog {
+    position: absolute;
+    display: flex;
+    gap: 0.7rem;
+    z-index: -1;
+    transition: all .4s ease;
+    bottom: 1.5rem;
+    right: -2.5rem;
+}
+
+.card-blog:hover .button-group-blog {
+    right: 0;
+    z-index: 0;
+}
+
+.button-group-blog span {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all .4 ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group-blog span i {
+    font-size: 1.3rem;
+
+}
+
+.button-group-blog span:hover {
+    background-color: var(--primary-color);
+
+}
+
+.button-group-blog span:hover i {
+    color: white;
+}
+.content-blog h3{
+font-size: 1.8rem;
+margin-bottom: 1.76rem;
+color: var(--dark-color);
+font-weight: 500;
+}
+
+.content-blog h3:hover{
+color: var(--primary-color);
+cursor: pointer;
+}
+.content-blog p{
+margin-top: 1rem;
+font-size: 1.4rem;
+
+}
+.content-blog span{
+color: var(--primary-color);
+font-size: 1.3rem;
+}
+
+.btn-read-more {
+padding: 1rem 3rem;
+background-color: var(--primary-color);
+color: white;
+text-decoration: uppercase;
+font-size: 1.4rem;
+border-radius:2rem;
+margin:3rem 0 5rem;
+display: inline-block;
+cursor: pointer;
+}
+.btn-read-more:hover{
+    background-color: var(--dark-color);
 }
