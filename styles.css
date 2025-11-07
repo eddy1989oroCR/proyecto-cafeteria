@@ -694,3 +694,25 @@ cursor: pointer;
 .btn-read-more:hover{
     background-color: var(--dark-color);
 }
+
+/* seccion de footer */
+.footer{
+   background-color:var(--primary-color); 
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+    }
+    .menu-footer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr) 30rem;
+        gap: 3rem;
+        justify-items: center;
+        
+    }
+   .title-footer{
+
+   }
